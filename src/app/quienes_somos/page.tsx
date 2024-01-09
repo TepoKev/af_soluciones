@@ -1,12 +1,9 @@
-import CubeImg from "../../../public/cubes.jpg";
+import AbogadosImg from "../../../public/abogados.jpg";
 import Section from "../components/Section";
 
 function QuienesSomos() {
   return (
-    <Section title="¿Quienes Somos?" srcImg={CubeImg.src} id="quienes_somos">
-      <header className="text-center">
-        <h1>¿Quienes Somos?</h1>
-      </header>
+    <Section title="¿Quienes Somos?" srcImg={AbogadosImg.src} id="quienes_somos">
       <div>
         <p>
           “Somos un grupo de profesionales ofreciendo confianza, estabilidad y

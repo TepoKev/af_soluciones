@@ -3,11 +3,13 @@ function Section({
   title,
   srcImg,
   id,
+  textColor = "text-white",
 }: {
   children: React.ReactNode | null | undefined;
   title: string;
   srcImg: string;
   id: string | undefined | null;
+  textColor?: string;
 }) {
   return (
     <>
@@ -19,7 +21,7 @@ function Section({
           height: "100%",
         }}
       >
-        <span className="text-4xl text-white">{title}</span>
+        <header className={`text-4xl ${textColor}`}>{title}</header>
       </div>
       <section id={id ? id : ""} className="text-xl p-3">
         {children}

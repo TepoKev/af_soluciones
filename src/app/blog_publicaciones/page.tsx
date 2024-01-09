@@ -1,12 +1,15 @@
-import React from "react";
+import BlogPublicacionesImg from "../../../public/blog.jpg";
+import Section from "../components/Section";
 
 function BlogPublicaciones() {
   return (
-    <section id="blog_publicaciones">
-      <header>
-        <h1>Blob / Publicaciones</h1>
-      </header>
-    </section>
+    <Section
+      title="Blog / Publicaciones"
+      srcImg={BlogPublicacionesImg.src}
+      id="blog_publicaciones"
+    >
+      <h1>Blog / Publicaciones</h1>
+    </Section>
   );
 }
 

@@ -40,7 +40,7 @@ export default function RootLayout({
               />
             </Link>
 
-            <div className={`flex lg:flex-row mx-3 text-[${secondary}]`}>
+            <div className={`flex lg:flex-row mx-3 text-[#f2c614]`}>
               <div className="flex lg:flex-row">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -98,12 +98,12 @@ export default function RootLayout({
             </div>
           </header>
           <div className="p-3 w-full">
-            <hr className={`w-full border border-[${tertiary}]`} />
+            <hr className={`w-full border border-[#76777a]`} />
           </div>
           <TopBar />
 
           <div className="container mx-auto">{children}</div>
-          <footer className={`bg-[${primary}] w-full`}>
+          <footer className={`bg-[#275aa6] w-full`}>
             <div className="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-8">
               <div className="sm:flex sm:items-center sm:justify-between">
                 <span className="text-sm text-white sm:text-center">

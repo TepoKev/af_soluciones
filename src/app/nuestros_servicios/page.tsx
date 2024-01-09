@@ -1,11 +1,9 @@
-import React from "react";
+import ServiciosImg from "../../../public/servicios.jpg";
+import Section from "../components/Section";
 
 function NuestrosServicios() {
   return (
-    <section id="nuestros_servicios">
-      <header className="text-center">
-        <h1>NUESTROS SERVICIOS</h1>
-      </header>
+    <Section title="Nuestros Servicios" srcImg={ServiciosImg.src} id="nuestros_servicios">
       <div className="text-center">
         <h1>Outsourcing Contable</h1>
       </div>
@@ -169,7 +167,7 @@ function NuestrosServicios() {
           </li>
         </ul>
       </div>
-    </section>
+    </Section>
   );
 }
 

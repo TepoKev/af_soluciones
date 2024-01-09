@@ -1,11 +1,15 @@
 import React from "react";
+import Section from "../components/Section";
+import NuestraFirmaImg from "../../../public/firma.jpg";
 
 function NuestraFirma() {
   return (
-    <section id="nuestra_firma">
-      <header className="text-center">
-        <h1>NUESTRA FIRMA</h1>
-      </header>
+    <Section
+      title="Nuestra Firma"
+      srcImg={NuestraFirmaImg.src}
+      id="nuestra_firma"
+      textColor="text-gray-700"
+    >
       <div>
         <div className="text-center">
           <h2>Nuestros Socios</h2>
@@ -53,7 +57,7 @@ function NuestraFirma() {
       <div className="text-center">
         <h2>NUESTRO EQUIPO</h2>
       </div>
-    </section>
+    </Section>
   );
 }
 
