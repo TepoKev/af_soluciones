@@ -12,16 +12,6 @@ function TopBar() {
     <nav className="flex flex-col items-center justify-center lg:flex-row font-extrabold w-full">
       <Link
         href="/"
-        rel="noopener noreferrer"
-        className={`m-3 ${
-          active === "/" ? "border-b-2 border-indigo-500" : ""
-        }`}
-        onClick={() => handleActive("/")}
-      >
-        AF Soluciones
-      </Link>
-      <Link
-        href="/quienes_somos"
         className={`m-3 ${
           active === "/quienes_somos" ? "border-b-2 border-indigo-500" : ""
         }`}
