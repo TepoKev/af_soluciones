@@ -17,6 +17,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "AF Soluciones",
   description: "AF Soluciones",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -32,13 +35,11 @@ export default function RootLayout({
             id="header"
             className="flex items-center justify-between w-full p-3"
           >
-            <Link href="/">
-              <img
-                src={headerLogo.src}
-                alt="AF Soluciones"
-                style={{ height: "50px", width: "auto" }}
-              />
-            </Link>
+            <img
+              src={headerLogo.src}
+              alt="AF Soluciones"
+              style={{ height: "50px", width: "auto" }}
+            />
 
             <div className={`flex lg:flex-row mx-3 text-[#f2c614]`}>
               <div className="flex lg:flex-row">
@@ -53,11 +54,11 @@ export default function RootLayout({
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
                   />
                 </svg>
 
-                <span className="pl-2">icon 1</span>
+                <span className="pl-2">FAQ</span>
               </div>
               <div className="flex lg:flex-row mx-3">
                 <svg
@@ -71,11 +72,11 @@ export default function RootLayout({
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"
                   />
                 </svg>
 
-                <span className="pl-2">icon 2</span>
+                <span className="pl-2">Support</span>
               </div>
               <div className="flex lg:flex-row mx-3">
                 <svg
@@ -89,11 +90,11 @@ export default function RootLayout({
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
                   />
                 </svg>
 
-                <span className="pl-2">icon 3</span>
+                <span className="pl-2">Theme Details</span>
               </div>
             </div>
           </header>
@@ -102,10 +103,10 @@ export default function RootLayout({
           </div>
           <TopBar />
 
-          <div className="container mx-auto">{children}</div>
+          <div className="w-full text-[#275aa6]">{children}</div>
           <footer className={`bg-[#275aa6] w-full`}>
             <div className="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-8">
-              <div className="sm:flex sm:items-center sm:justify-between">
+              <div className="flex flex-col items-center sm:flex sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-sm text-white sm:text-center">
                   © 2024{" "}
                   <Link href="/" className="hover:underline">
@@ -153,18 +154,6 @@ export default function RootLayout({
                     <span className="sr-only">Twitter page</span>
                   </Link>
                 </div>
-              </div>
-              <div className="flex flex-col items-center justify-start mt-3">
-                <span className="text-sm text-white sm:text-center">
-                  Res. La Hacienda, San José Villanueva, La Libertad, El
-                  Salvador.
-                </span>
-                <span className="text-sm text-white sm:text-center">
-                  Tel. (503) 6990-5490
-                </span>
-                <span className="text-sm text-white sm:text-center">
-                  Email: info@afsolucionesintegrales.com
-                </span>
               </div>
             </div>
           </footer>

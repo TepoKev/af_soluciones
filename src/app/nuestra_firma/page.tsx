@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../components/Section";
-import NuestraFirmaImg from "../../../public/firma.jpg";
+import NuestraFirmaImg from "../../../public/management.jpeg";
+import Woman from "../../../public/woman.png";
 
 function NuestraFirma() {
   return (
@@ -10,11 +11,10 @@ function NuestraFirma() {
       id="nuestra_firma"
       textColor="text-gray-700"
     >
+      <header className="text-3xl font-extrabold py-3 text-center p-5">Nuestra Firma</header>
       <div>
-        <div className="text-center">
-          <h2>Nuestros Socios</h2>
-        </div>
-        <div>
+        <div className="px-52 flex flex-col items-center">
+          <img src={Woman.src} alt="Nubia Montes de Flores" style={{height: "auto", width:"50px"}}/>
           <h3>Nubia Montes de Flores</h3>
           <p>
             Profesional en Contaduría Pública con Maestría en Análisis
@@ -33,7 +33,8 @@ function NuestraFirma() {
             de la Profesión de Contaduría Pública y Auditoria).
           </p>
         </div>
-        <div>
+        <div className="px-52 flex flex-col items-center">
+        <img src={Woman.src} alt="Elizabeth de Arce" style={{height: "auto", width:"50px"}}/>
           <h3>Elizabeth de Arce</h3>
           <p>
             Profesional en Contaduría Pública con ________________, especialista
@@ -53,9 +54,6 @@ function NuestraFirma() {
             Estados Unidos.
           </p>
         </div>
-      </div>
-      <div className="text-center">
-        <h2>NUESTRO EQUIPO</h2>
       </div>
     </Section>
   );

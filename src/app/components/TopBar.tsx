@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 function TopBar() {
@@ -8,25 +8,30 @@ function TopBar() {
   const handleActive = (path: string) => {
     setActive(path);
   };
+
+  useEffect(() => {
+    setActive(window.location.pathname);
+  }, []);
+
   return (
-    <nav className="flex flex-col items-center justify-center lg:flex-row font-extrabold w-full">
+    <nav className="flex flex-col items-center justify-center text-lg font-extrabold lg:flex-row w-full">
       <Link
         href="/"
         className={`m-3 ${
-          active === "/quienes_somos" ? "border-b-2 border-indigo-500" : ""
+          active === "/" ? "border-b-2 border-indigo-500" : ""
         }`}
-        onClick={() => handleActive("/quienes_somos")}
+        onClick={() => handleActive("/")}
       >
         ¿Quiénes Somos?
       </Link>
       <Link
         href="/nuestra_firma"
-        className={`m-3 ${
+        className={` m-3 ${
           active === "/nuestra_firma" ? "border-b-2 border-indigo-500" : ""
         }`}
         onClick={() => handleActive("/nuestra_firma")}
       >
-        NUESTRA FIRMA
+        Nuestra Firma
       </Link>
       <Link
         href="/nuestros_servicios"
@@ -35,7 +40,7 @@ function TopBar() {
         }`}
         onClick={() => handleActive("/nuestros_servicios")}
       >
-        NUESTROS SERVICIOS
+        Nuestros Servicios
       </Link>
       <Link
         href="/nuestros_clientes"
@@ -44,7 +49,7 @@ function TopBar() {
         }`}
         onClick={() => handleActive("/nuestros_clientes")}
       >
-        NUESTROS CLIENTES
+        Nuestros Clientes
       </Link>
       <Link
         href="/contactenos"
@@ -53,16 +58,7 @@ function TopBar() {
         }`}
         onClick={() => handleActive("/contactenos")}
       >
-        CONTÁCTENOS
-      </Link>
-      <Link
-        href="/blog_publicaciones"
-        className={`m-3 ${
-          active === "/blog_publicaciones" ? "border-b-2 border-indigo-500" : ""
-        }`}
-        onClick={() => handleActive("/blog_publicaciones")}
-      >
-        BLOG/PUBLICACIONES
+        Contáctenos
       </Link>
     </nav>
   );

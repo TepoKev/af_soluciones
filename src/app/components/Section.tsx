@@ -14,15 +14,18 @@ function Section({
   return (
     <>
       <div
-        className="p-32"
+        className="pl-32 pt-32 pb-32"
         style={{
           backgroundImage: `url(${srcImg})`,
           width: "100%",
-          height: "100%",
+          height: "auto",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+          backgroundAttachment: "fixed",
+          
         }}
-      >
-        <header className={`text-4xl ${textColor}`}>{title}</header>
-      </div>
+      />
       <section id={id ? id : ""} className="text-xl p-3">
         {children}
       </section>
